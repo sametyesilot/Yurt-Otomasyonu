@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{899BC319-2C85-4A5E-BF37-47C7619C2C63}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YurtOtomasyon</RootNamespace>
+    <AssemblyName>YurtOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.UI, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.Wizard, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BolumDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BolumDelete.Designer.cs">
+      <DependentUpon>BolumDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BolumEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BolumEkle.Designer.cs">
+      <DependentUpon>BolumEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnection.cs" />
+    <Compile Include="DepartDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartDelete.Designer.cs">
+      <DependentUpon>DepartDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmanEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmanEkle.Designer.cs">
+      <DependentUpon>DepartmanEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doviz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doviz.Designer.cs">
+      <DependentUpon>Doviz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oda.Designer.cs">
+      <DependentUpon>Oda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odeme.Designer.cs">
+      <DependentUpon>Odeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciListele.Designer.cs">
+      <DependentUpon>OgrenciListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelAdd.Designer.cs">
+      <DependentUpon>PersonelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelleriListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelleriListele.Designer.cs">
+      <DependentUpon>PersonelleriListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelUpdate.Designer.cs">
+      <DependentUpon>PersonelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelDelete.Designer.cs">
+      <DependentUpon>PersonelDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandevuAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuAdd.Designer.cs">
+      <DependentUpon>RandevuAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RandevuBildir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuBildir.Designer.cs">
+      <DependentUpon>RandevuBildir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RandevuTakvimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuTakvimi.Designer.cs">
+      <DependentUpon>RandevuTakvimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RehberDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RehberDelete.Designer.cs">
+      <DependentUpon>RehberDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RehberEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RehberEkle.Designer.cs">
+      <DependentUpon>RehberEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Saat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saat.Designer.cs">
+      <DependentUpon>Saat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SonGirisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SonGirisler.Designer.cs">
+      <DependentUpon>SonGirisler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAdd.Designer.cs">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDelete.Designer.cs">
+      <DependentUpon>StudentDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentUpdate.Designer.cs">
+      <DependentUpon>StudentUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl.cs" />
+    <Compile Include="YetkiDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YetkiDelete.Designer.cs">
+      <DependentUpon>YetkiDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YetkiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YetkiEkle.Designer.cs">
+      <DependentUpon>YetkiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiAdd.Designer.cs">
+      <DependentUpon>YoneticiAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiDelete.Designer.cs">
+      <DependentUpon>YoneticiDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticileriListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticileriListele.Designer.cs">
+      <DependentUpon>YoneticileriListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiUpdate.Designer.cs">
+      <DependentUpon>YoneticiUpdate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BolumDelete.resx">
+      <DependentUpon>BolumDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BolumEkle.resx">
+      <DependentUpon>BolumEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartDelete.resx">
+      <DependentUpon>DepartDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmanEkle.resx">
+      <DependentUpon>DepartmanEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doviz.resx">
+      <DependentUpon>Doviz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oda.resx">
+      <DependentUpon>Oda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odeme.resx">
+      <DependentUpon>Odeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciListele.resx">
+      <DependentUpon>OgrenciListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelAdd.resx">
+      <DependentUpon>PersonelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelDelete.resx">
+      <DependentUpon>PersonelDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelleriListele.resx">
+      <DependentUpon>PersonelleriListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelUpdate.resx">
+      <DependentUpon>PersonelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RandevuAdd.resx">
+      <DependentUpon>RandevuAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RandevuBildir.resx">
+      <DependentUpon>RandevuBildir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RandevuTakvimi.resx">
+      <DependentUpon>RandevuTakvimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RehberDelete.resx">
+      <DependentUpon>RehberDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RehberEkle.resx">
+      <DependentUpon>RehberEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Saat.resx">
+      <DependentUpon>Saat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SonGirisler.resx">
+      <DependentUpon>SonGirisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAdd.resx">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDelete.resx">
+      <DependentUpon>StudentDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentUpdate.resx">
+      <DependentUpon>StudentUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YetkiDelete.resx">
+      <DependentUpon>YetkiDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YetkiEkle.resx">
+      <DependentUpon>YetkiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiAdd.resx">
+      <DependentUpon>YoneticiAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiDelete.resx">
+      <DependentUpon>YoneticiDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticileriListele.resx">
+      <DependentUpon>YoneticileriListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiUpdate.resx">
+      <DependentUpon>YoneticiUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Adsız tasarım %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\YurtOtomasyon.mdf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
